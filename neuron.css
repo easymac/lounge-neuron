@@ -1,0 +1,269 @@
+/**
+ * neuron dark
+ * lounge theme by easymac
+ * designed for use with 16 nickname colors
+ * i'll make a fork someday.
+ */
+
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300italic,300,400italic,600,600italic,700italic,700,900,900italic|Source+Code+Pro:400,900,700,600,500,300,200);
+
+/* neuron base16 colors
+ * BASE 00: #1C1919
+ * BASE 01: #282525
+ * BASE 02: #343130
+ * BASE 03: #403D3C
+ * BASE 04: #8D8484
+ * BASE 05: #C5C1C1
+ * BASE 06: #EAE9E9
+ * BASE 07: #F6F6F6
+ * BASE 08: #EF4657
+ * BASE 09: #FFB03B
+ * BASE 0A: #FFD34E
+ * BASE 0B: #88A825
+ * BASE 0C: #499E8D
+ * BASE 0D: #1695A3
+ * BASE 0E: #AD5472
+ * BASE 0F: #BD8D46
+ */
+
+/* irc colors
+ * 0, white: #F6F6F6
+ * 1, black: #1C1919
+ * 2, blue: #1695A3
+ * 4, green: #88A825
+ * 5, light red: #EF4657
+ * 6, brown: #BD8D46
+ * 7, purple: #AD5472
+ * 8, orange: #FFB03B
+ * 9, yellow: #FFD34E
+ * 10, light green: #D5F572
+ * 11, cyan: #499E8D
+ * 12, light cyan: #7CD1C0
+ * 13, light blue: #63E2F0
+ * 14, pink: #FF93A4
+ * 15, grey: #403D3C
+ * 16, light grey: #8E8484
+ */
+
+
+body {
+    background-color: #1C1919;
+    font-family: 'Source Sans Pro';
+    color: #C5C1C1;
+}
+
+#main {
+    bottom: 0;
+    top: 0;
+    right: 0;
+    border-radius: 0;
+    background: #282525;
+}
+
+#form {
+    border: none;
+    background-color: #1C1919;
+}
+
+#form .inner {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border: none;
+}
+
+#form .input {
+    height: 48px;
+    border-radius: 0;
+}
+
+#form #input {
+    border-radius: 0;
+    border: none;
+    background-color: #1C1919;
+}
+
+#form #submit {
+    height: 48px;
+    line-height: 48px;
+    margin-right: 5px;
+}
+
+#footer {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    width: 220px;
+    border-radius: 0;
+}
+
+#chat .search {
+    color: #EAE9E9;
+}
+
+#chat .search::-webkit-input-placeholder {
+    color: #C5C1C1;
+}
+
+#chat, #windows .header {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 600;
+}
+
+#chat .time {
+    color: #403D3C;
+}
+
+#chat .self .text {
+    color: #EAE9E9;
+}
+
+#form #nick {
+    background-color: transparent;
+    color: #8D8484;
+    height: 100%;
+    margin: 0;
+    margin-right: 10px;
+    line-height: 48px;
+    padding-right: 0;
+}
+
+#chat a {
+    color: #1695A3;
+}
+
+#chat .from {
+    border-right: 1px solid #343130;
+}
+
+#chat .sidebar {
+    background-color: transparent;
+    border: none;
+}
+
+#chat .count {
+    background-color: transparent;
+}
+
+#chat .user-mode:before {
+    border: none;
+}
+
+#chat .notice .time {
+    color: #403D3C !important;
+}
+#chat .notice .text, #chat .chan .notice .user {
+    color: #EF4657 !important;
+}
+
+#windows .header {
+    border: none;
+}
+
+#windows .window:before, #windows .chan:before {
+    height: 0;
+    border: none;
+}
+
+#windows .chan, #windows .window {
+    background-color: #282525;
+}
+
+#sidebar button:hover, #sidebar .chan:hover, #sidebar .chan.active {
+    color: #F6F6F6;
+}
+
+#sidebar button, #sidebar .chan, #sidebar .sign-out {
+    color: #8D8484;
+}
+
+#sidebar .chan:first-child {
+    color: #EF4657;
+    padding-left: 10px;
+    font-size: 1.1em;
+}
+
+#sidebar .chan:first-child::after {
+    content: ' ';
+    display: block;
+    height: 2px;
+    background-color: #EF4657;
+    width: 25px;
+    margin-top: 8px;
+}
+
+#sidebar .chan:first-child:hover::after, #sidebar .chan:first-child.active::after {
+    background-color: #FF93A4;
+}
+
+#sidebar .chan:first-child:hover, #sidebar .chan:first-child.active {
+    color: #FF93A4;
+}
+
+#sidebar .chan.lobby:before, #chat .lobby .title:before {
+    content: none;
+}
+
+#sidebar .chan .name:after {
+    background: none;
+}
+
+::-webkit-scrollbar {
+    border-radius: 0;
+    background-color: rgba(0,0,0,0);
+}
+::-webkit-scrollbar-thumb {
+    background-color: red;
+    border-radius: 0;
+}
+
+#chat.colored-nicks .user.color-1, #chat.colored-nicks .user.color-17 {
+    color: #EF4657;
+}
+#chat.colored-nicks .user.color-2, #chat.colored-nicks .user.color-18 {
+    color: #FF93A4;
+}
+#chat.colored-nicks .user.color-3, #chat.colored-nicks .user.color-19 {
+    color: #FFB03B;
+}
+#chat.colored-nicks .user.color-4, #chat.colored-nicks .user.color-20 {
+    color: #CC7D08;
+}
+#chat.colored-nicks .user.color-5, #chat.colored-nicks .user.color-21 {
+    color: #FFD34E;
+}
+#chat.colored-nicks .user.color-6, #chat.colored-nicks .user.color-22 {
+    color: #CCA01B;
+}
+#chat.colored-nicks .user.color-7, #chat.colored-nicks .user.color-23 {
+    color: #ACF046;
+}
+#chat.colored-nicks .user.color-8, #chat.colored-nicks .user.color-24 {
+    color: #D5F572;
+}
+#chat.colored-nicks .user.color-9, #chat.colored-nicks .user.color-25 {
+    color: #499E8D;
+}
+#chat.colored-nicks .user.color-10, #chat.colored-nicks .user.color-26 {
+    color: #B5FFE1;
+}
+#chat.colored-nicks .user.color-11, #chat.colored-nicks .user.color-27 {
+    color: #35A7FF;
+}
+#chat.colored-nicks .user.color-12, #chat.colored-nicks .user.color-28 {
+    color: #91A6FF;
+}
+#chat.colored-nicks .user.color-13, #chat.colored-nicks .user.color-29 {
+    color: #8A46F0;
+}
+#chat.colored-nicks .user.color-14, #chat.colored-nicks .user.color-30 {
+    color: #FF88DC;
+}
+#chat.colored-nicks .user.color-15, #chat.colored-nicks .user.color-31 {
+    color: #BD8D46;
+}
+#chat.colored-nicks .user.color-16, #chat.colored-nicks .user.color-32 {
+    color: #F0C079;
+}
