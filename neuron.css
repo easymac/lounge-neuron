@@ -47,7 +47,7 @@
 
 
 body {
-    background-color: #1C1919;
+    background-color: #282525;
     font-family: 'Source Sans Pro';
     color: #C5C1C1;
 }
@@ -62,7 +62,8 @@ body {
 
 #form {
     border: none;
-    background-color: #1C1919;
+    background-color: #282525;
+    padding: 0;
 }
 
 #form .inner {
@@ -73,21 +74,24 @@ body {
     border: none;
 }
 
-#form .input {
+#windows #form .input {
     height: 48px;
     border-radius: 0;
+    background-color: transparent;
+    border: none;
+    color: white;
 }
 
 #form #input {
     border-radius: 0;
     border: none;
-    background-color: #1C1919;
+    background-color: #282525;
 }
 
 #form #submit {
     height: 48px;
     line-height: 48px;
-    margin-right: 5px;
+    margin-right: 15px;
 }
 
 #footer {
@@ -97,6 +101,12 @@ body {
     background-color: transparent;
     width: 220px;
     border-radius: 0;
+    text-align: left;
+    padding-left: 20px;
+}
+
+#chat .count::before {
+    right: 28px;
 }
 
 #chat .search {
@@ -110,6 +120,8 @@ body {
 #chat, #windows .header {
     font-family: 'Source Code Pro', monospace;
     font-weight: 600;
+    padding-left: 12px;
+    padding-right: 30px;
 }
 
 #chat .time {
@@ -118,6 +130,17 @@ body {
 
 #chat .self .text {
     color: #EAE9E9;
+}
+
+#chat .unread-marker::before {
+    border-top: 1px solid #EF4657;
+}
+
+#chat .unread-marker .unread-marker-text::before {
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #EF4657;
+    background-color: #282525;
 }
 
 #form #nick {
@@ -135,7 +158,7 @@ body {
 }
 
 #chat .from {
-    border-right: 1px solid #343130;
+    border-right: none;
 }
 
 #chat .sidebar {
@@ -211,12 +234,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-    border-radius: 0;
-    background-color: rgba(0,0,0,0);
-}
-::-webkit-scrollbar-thumb {
-    background-color: red;
-    border-radius: 0;
+    display: none;
 }
 
 #chat.colored-nicks .user.color-1, #chat.colored-nicks .user.color-17 {
