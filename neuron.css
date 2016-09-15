@@ -95,7 +95,7 @@ body {
 }
 
 #footer {
-    left: 0;
+    margin-left: -5px;
     right: 0;
     bottom: 0;
     background-color: transparent;
