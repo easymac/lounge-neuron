@@ -2,7 +2,7 @@
  * neuron dark
  * lounge theme by easymac
  * designed for use with 16 nickname colors
- * i'll make a fork someday.
+ * jon snow kills sansa
  */
 
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300italic,300,400italic,600,600italic,700italic,700,900,900italic|Source+Code+Pro:400,900,700,600,500,300,200);
@@ -47,240 +47,300 @@
 
 
 body {
-    background-color: #282525;
-    font-family: 'Source Sans Pro';
-    color: #C5C1C1;
+  background-color: #282525;
+  font-family: 'Source Sans Pro';
+  color: #C5C1C1;
 }
 
 #main {
-    bottom: 0;
-    top: 0;
-    right: 0;
-    border-radius: 0;
-    background: #282525;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  border-radius: 0;
+  background: #282525;
 }
 
 #form {
-    border: none;
-    background-color: #282525;
-    padding: 0;
+  border: none;
+  background-color: #282525;
+  padding: 0;
 }
 
 #form .inner {
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    border: none;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: none;
 }
 
 #windows #form .input {
-    border-radius: 0;
-    background-color: transparent;
-    border: none;
-    color: #F6F6F6;
+  border-radius: 0;
+  background-color: transparent;
+  border: none;
+  color: #F6F6F6;
 }
 
 #form #input {
-    border-radius: 0;
-    border: none;
-    background-color: #282525;
+  border-radius: 0;
+  border: none;
+  background-color: #282525;
+  font-family: "Source Code Pro";
+}
+
+#form #input::placeholder {
+  color: #8D8484;
 }
 
 #form #submit {
-    height: 48px;
-    line-height: 48px;
-    margin-right: 15px;
+  height: 48px;
+  line-height: 48px;
+  margin-right: 15px;
 }
 
 #footer {
-    margin-left: -5px;
-    right: 0;
-    bottom: 0;
-    background-color: transparent;
-    width: 220px;
-    border-radius: 0;
-    text-align: left;
-    padding-left: 20px;
+  margin-left: -5px;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  width: 220px;
+  border-radius: 0;
+  text-align: left;
+  padding-left: 20px;
+  height: 50px;
+  line-height: 50px;
 }
 
 #chat .count::before {
-    right: 28px;
+  right: 28px;
 }
 
 #chat .search {
-    color: #EAE9E9;
+  color: #EAE9E9;
 }
 
-#chat .search::-webkit-input-placeholder {
-    color: #C5C1C1;
+#chat .search::placeholder {
+  color: #C5C1C1;
 }
 
 #chat, #windows .header {
-    font-family: 'Source Code Pro', monospace;
-    font-weight: 600;
-    padding-left: 12px;
-    padding-right: 30px;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 600;
+  padding-left: 12px;
+  padding-right: 30px;
 }
 
+#windows .header .title {
+  font-size: 12px;
+}
+
+#chat .title::before {
+  margin-top: 19px;
+}
+
+
 #chat .time {
-    color: #403D3C;
+  color: #403D3C;
 }
 
 #chat .self .text {
-    color: #EAE9E9;
+  color: #EAE9E9;
 }
 
 #chat .unread-marker::before {
-    border-top: 1px solid #EF4657;
+  border-top: 1px solid #EF4657;
 }
 
 #chat .unread-marker .unread-marker-text::before {
-    text-transform: uppercase;
-    font-family: 'Source Sans Pro', sans-serif;
-    color: #EF4657;
-    background-color: #282525;
+  text-transform: uppercase;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #EF4657;
+  background-color: #282525;
+}
+
+#chat .date-marker::before {
+  border-top: 1px solid #499E8D;
+}
+
+#chat .date-marker-text:before {
+  background-color: #282525;
+  color: #499E8D;
+  text-transform: uppercase;
 }
 
 #form #nick {
-    background-color: transparent;
-    color: #8D8484;
-    height: 100%;
-    margin: 0;
-    margin-right: 10px;
-    line-height: 48px;
-    padding-right: 0;
+  background-color: transparent;
+  color: #9CA5B4;
+  height: 100%;
+  margin: 0;
+  margin-right: 10px;
+  line-height: 48px;
+  padding-right: 0;
+  font-size: 12px;
+  font-family: "Source Sans Pro";
+}
+
+#form #nick.editable {
+  border: none;
+}
+
+#form #nick.editable #nick-value {
+  text-decoration: underline;
 }
 
 #chat a {
-    color: #1695A3;
+  color: #1695A3;
 }
 
 #chat .from {
-    border-right: none;
+  border-right: none;
+}
+
+#chat .from::after {
+  display: none;
 }
 
 #chat .sidebar {
-    background-color: #282525;
-    border: none;
+  background-color: #282525;
+  border: none;
 }
 
 #chat .count {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 #chat .user-mode:before {
-    border: none;
+  border: none;
 }
 
 #chat .notice .time {
-    color: #403D3C !important;
+  color: #403D3C !important;
 }
 #chat .notice .text, #chat .chan .notice .user {
-    color: #EF4657 !important;
+  color: #EF4657 !important;
+}
+
+#chat table.channel-list td, #chat table.ban-list td {
+  border: none;
+}
+
+#chat table.channel-list tr:nth-child(even), #chat table.ban-list tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#chat table.channel-list td {
+  color: #C5C1C1;
+}
+
+#chat table.channel-list td.channel .inline-channel {
+  color: #91A6FF;
+}
+
+#windows .header .topic, .messages .msg {
+  font-family: "Source Code Pro";
 }
 
 #windows .header {
-    border: none;
+  border: none;
 }
 
 #windows .window:before, #windows .chan:before {
-    height: 0;
-    border: none;
+  height: 0;
+  border: none;
 }
 
 #windows .chan, #windows .window {
-    background-color: #282525;
+  background-color: #282525;
 }
 
 #sidebar button:hover, #sidebar .chan:hover, #sidebar .chan.active {
-    color: #F6F6F6;
+  color: #F6F6F6;
 }
 
 #sidebar button, #sidebar .chan, #sidebar .sign-out {
-    color: #8D8484;
+  color: #8D8484;
 }
 
 #sidebar .chan:first-child {
-    color: #EF4657;
-    padding-left: 10px;
-    font-size: 1.1em;
+  color: #EF4657;
+  padding-left: 10px;
+  font-size: 1.1em;
 }
 
 #sidebar .chan:first-child::after {
-    content: ' ';
-    display: block;
-    height: 2px;
-    background-color: #EF4657;
-    width: 25px;
-    margin-top: 8px;
+  content: ' ';
+  display: block;
+  height: 2px;
+  background-color: #EF4657;
+  width: 25px;
+  margin-top: 8px;
 }
 
 #sidebar .chan:first-child:hover::after, #sidebar .chan:first-child.active::after {
-    background-color: #FF93A4;
+  background-color: #FF93A4;
 }
 
 #sidebar .chan:first-child:hover, #sidebar .chan:first-child.active {
-    color: #FF93A4;
+  color: #FF93A4;
 }
 
 #sidebar .chan.lobby:before, #chat .lobby .title:before {
-    content: none;
+  content: none;
 }
 
 #sidebar .chan .name:after {
-    background: none;
+  background: none;
 }
 
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 #chat.colored-nicks .user.color-1, #chat.colored-nicks .user.color-17 {
-    color: #EF4657;
+  color: #EF4657;
 }
 #chat.colored-nicks .user.color-2, #chat.colored-nicks .user.color-18 {
-    color: #FF93A4;
+  color: #FF93A4;
 }
 #chat.colored-nicks .user.color-3, #chat.colored-nicks .user.color-19 {
-    color: #FFB03B;
+  color: #FFB03B;
 }
 #chat.colored-nicks .user.color-4, #chat.colored-nicks .user.color-20 {
-    color: #CC7D08;
+  color: #CC7D08;
 }
 #chat.colored-nicks .user.color-5, #chat.colored-nicks .user.color-21 {
-    color: #FFD34E;
+  color: #FFD34E;
 }
 #chat.colored-nicks .user.color-6, #chat.colored-nicks .user.color-22 {
-    color: #CCA01B;
+  color: #CCA01B;
 }
 #chat.colored-nicks .user.color-7, #chat.colored-nicks .user.color-23 {
-    color: #ACF046;
+  color: #ACF046;
 }
 #chat.colored-nicks .user.color-8, #chat.colored-nicks .user.color-24 {
-    color: #D5F572;
+  color: #D5F572;
 }
 #chat.colored-nicks .user.color-9, #chat.colored-nicks .user.color-25 {
-    color: #499E8D;
+  color: #499E8D;
 }
 #chat.colored-nicks .user.color-10, #chat.colored-nicks .user.color-26 {
-    color: #B5FFE1;
+  color: #B5FFE1;
 }
 #chat.colored-nicks .user.color-11, #chat.colored-nicks .user.color-27 {
-    color: #35A7FF;
+  color: #35A7FF;
 }
 #chat.colored-nicks .user.color-12, #chat.colored-nicks .user.color-28 {
-    color: #91A6FF;
+  color: #91A6FF;
 }
 #chat.colored-nicks .user.color-13, #chat.colored-nicks .user.color-29 {
-    color: #8A46F0;
+  color: #8A46F0;
 }
 #chat.colored-nicks .user.color-14, #chat.colored-nicks .user.color-30 {
-    color: #FF88DC;
+  color: #FF88DC;
 }
 #chat.colored-nicks .user.color-15, #chat.colored-nicks .user.color-31 {
-    color: #BD8D46;
+  color: #BD8D46;
 }
 #chat.colored-nicks .user.color-16, #chat.colored-nicks .user.color-32 {
-    color: #F0C079;
+  color: #F0C079;
 }
